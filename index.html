@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="left">Akash Dey</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-left">
+            <h1>Hi, I'm <span class="name">Akash Dey</span></h1>
+            <div class="typing-text" id="element"></div>
+            <p>A motivated CSE student from Meghnad Saha Institute of Technology, passionate about building real-world
+                web applications. Let's create something amazing together!</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="Akash Dey_CV.pdf" target="_blank" class="btn btn-secondary">Get my CV</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Akash Dey" class="profile-photo">
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-title">What I have done so far</div>
+        <h2 class="section-heading">Work Experience & Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>B.Tech – Computer Science & Engineering</h3>
+                <div class="timeline-date">June 2022 – July 2026</div>
+                <p>Pursuing Bachelor of Technology at Meghnad Saha Institute of Technology. Building strong foundations
+                    in DSA, DBMS, OOPS in JAVA, and full-stack web development.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Web Development Intern – Pinnacle</h3>
+                <div class="timeline-date">23 Jun 2025 – 23 Jul 2025</div>
+                <p>Developed web applications including a calculator with basic mathematical operations and a to-do list
+                    web app. Gained hands-on experience in real-world project workflows.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Team Lead & Project Coordinator</h3>
+                <div class="timeline-date">Academic Projects</div>
+                <p>Led academic project teams, coordinated cross-functional efforts, and served as Technical
+                    Documentation Lead — ensuring quality delivery and clear communication across all project phases.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <h3>Cricket Enthusiast</h3>
+                <div class="timeline-date">2020 – Present</div>
+                <p>Active cricketer with a passion for both batting and bowling. Participated in inter-college
+                    tournaments and enjoy the teamwork and strategy the sport demands.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="skills-container">
+            <div class="section-title">My Expertise</div>
+            <h2 class="section-heading">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Programming Languages</h4>
+                    <ul class="skill-list">
+                        <li>Java (OOPS & DSA)</li>
+                        <li>Python</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Backend & Database</h4>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>SQL & MySQL</li>
+                        <li>DBMS Concepts</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Tools & Other</h4>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>NLP Concepts</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Resources Section -->
+    <section class="resources" id="resources">
+        <div class="resources-container">
+            <div class="section-title">How I Learned</div>
+            <h2 class="section-heading">Recommended Learning Resources</h2>
+            <p class="resources-subtitle">These are the YouTube channels & websites that helped me build my skills.
+                Highly recommended for anyone starting out!</p>
+
+            <div class="resources-tabs">
+                <button class="res-tab active" data-filter="all">All</button>
+                <button class="res-tab" data-filter="frontend">Frontend</button>
+                <button class="res-tab" data-filter="programming">Programming</button>
+                <button class="res-tab" data-filter="dsa">DSA</button>
+                <button class="res-tab" data-filter="fullstack">Full Stack</button>
+            </div>
+
+            <div class="resources-grid" id="resourcesGrid">
+
+                <!-- Frontend -->
+                <div class="resource-card" data-category="frontend">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">🎨</div>
+                    <h4>Traversy Media</h4>
+                    <p>Best for HTML, CSS, JavaScript & modern frontend frameworks. Practical project-based tutorials.
+                    </p>
+                    <div class="resource-tags">
+                        <span class="res-tag">HTML/CSS</span><span class="res-tag">JavaScript</span>
+                    </div>
+                    <a href="https://www.youtube.com/@TraversyMedia" target="_blank" class="res-link">Visit Channel
+                        →</a>
+                </div>
+
+                <div class="resource-card" data-category="frontend">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">💻</div>
+                    <h4>Kevin Powell</h4>
+                    <p>The go-to channel for mastering CSS deeply — flexbox, grid, responsive design explained
+                        brilliantly.</p>
+                    <div class="resource-tags">
+                        <span class="res-tag">CSS</span><span class="res-tag">Responsive</span>
+                    </div>
+                    <a href="https://www.youtube.com/@KevinPowell" target="_blank" class="res-link">Visit Channel →</a>
+                </div>
+
+                <div class="resource-card" data-category="frontend fullstack">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">⚡</div>
+                    <h4>Apna College</h4>
+                    <p>Amazing Hindi-medium channel for web dev, JavaScript, and DSA. Very beginner-friendly and
+                        structured.</p>
+                    <div class="resource-tags">
+                        <span class="res-tag">JavaScript</span><span class="res-tag">Web Dev</span>
+                    </div>
+                    <a href="https://www.youtube.com/@ApnaCollegeOfficial" target="_blank" class="res-link">Visit
+                        Channel →</a>
+                </div>
+
+                <!-- Programming -->
+                <div class="resource-card" data-category="programming">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">☕</div>
+                    <h4>Telusko</h4>
+                    <p>Excellent for Java, Python and OOP concepts. Clear explanations with real-world examples in
+                        Hindi/English.</p>
+                    <div class="resource-tags">
+                        <span class="res-tag">Java</span><span class="res-tag">Python</span>
+                    </div>
+                    <a href="https://www.youtube.com/@Telusko" target="_blank" class="res-link">Visit Channel →</a>
+                </div>
+
+                <div class="resource-card" data-category="programming">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">🐍</div>
+                    <h4>CodeWithHarry</h4>
+                    <p>Top Hindi programming channel covering Python, C, web dev and more. Perfect for Indian learners.
+                    </p>
+                    <div class="resource-tags">
+                        <span class="res-tag">Python</span><span class="res-tag">C</span>
+                    </div>
+                    <a href="https://www.youtube.com/@CodeWithHarry" target="_blank" class="res-link">Visit Channel
+                        →</a>
+                </div>
+
+                <!-- DSA -->
+                <div class="resource-card" data-category="dsa programming">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">🧠</div>
+                    <h4>Striver (take U forward)</h4>
+                    <p>The best resource for DSA in Java. Covers arrays, trees, graphs, DP with structured A2Z roadmap.
+                    </p>
+                    <div class="resource-tags">
+                        <span class="res-tag">DSA</span><span class="res-tag">Java</span>
+                    </div>
+                    <a href="https://www.youtube.com/@takeUforward" target="_blank" class="res-link">Visit Channel →</a>
+                </div>
+
+                <div class="resource-card" data-category="dsa">
+                    <div class="resource-platform web">🌐 Website</div>
+                    <div class="resource-icon">🔢</div>
+                    <h4>LeetCode</h4>
+                    <p>Practice DSA problems used in real interviews. Start with easy problems and build up gradually.
+                    </p>
+                    <div class="resource-tags">
+                        <span class="res-tag">DSA</span><span class="res-tag">Interview Prep</span>
+                    </div>
+                    <a href="https://leetcode.com" target="_blank" class="res-link">Visit Website →</a>
+                </div>
+
+                <!-- Full Stack -->
+                <div class="resource-card" data-category="fullstack">
+                    <div class="resource-platform yt">▶ YouTube</div>
+                    <div class="resource-icon">🚀</div>
+                    <h4>The Net Ninja</h4>
+                    <p>Short, focused playlist-based tutorials for Node.js, React, MongoDB and modern full-stack
+                        development.</p>
+                    <div class="resource-tags">
+                        <span class="res-tag">Node.js</span><span class="res-tag">React</span>
+                    </div>
+                    <a href="https://www.youtube.com/@NetNinja" target="_blank" class="res-link">Visit Channel →</a>
+                </div>
+
+                <div class="resource-card" data-category="fullstack programming">
+                    <div class="resource-platform web">🌐 Website</div>
+                    <div class="resource-icon">📚</div>
+                    <h4>freeCodeCamp</h4>
+                    <p>Free structured curriculum covering HTML, CSS, JS, Python, SQL and more with certifications.</p>
+                    <div class="resource-tags">
+                        <span class="res-tag">Full Stack</span><span class="res-tag">Free</span>
+                    </div>
+                    <a href="https://www.freecodecamp.org" target="_blank" class="res-link">Visit Website →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="cert-container">
+            <div class="section-title">Achievements</div>
+            <h2 class="section-heading">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Cyber Job Simulation</h4>
+                    <p>Deloitte</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
+                    <h4>Advanced Python with Data Visualization</h4>
+                    <p>Online Certification</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-users"></i></div>
+                    <h4>Soft Skills Essentials</h4>
+                    <p>Nikhil Bharat Shiksha Parishad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-title">My Work</div>
+        <h2 class="section-heading">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🍽️</div>
+                <div class="project-content">
+                    <h3>Restaurant Website</h3>
+                    <p>A fully functional restaurant site featuring menus, reservations, and event details to enhance
+                        the customer dining experience.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🤖</div>
+                <div class="project-content">
+                    <h3>Multilingual Chatbot (NLP)</h3>
+                    <p>An ongoing NLP-based chatbot that detects language, processes intent, and responds across
+                        multiple languages using automated conversational intelligence.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">On-going</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🧮</div>
+                <div class="project-content">
+                    <h3>Calculator & To-Do App</h3>
+                    <p>Built during the Pinnacle internship — a calculator with full mathematical operations and a task
+                        management web application.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="section-title">Let's Work Together</div>
+            <h2 class="section-heading">Get In Touch</h2>
+            <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:akashdey.work@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> akashdey.work@gmail.com
+                </a>
+                <a href="tel:+917602172452" class="contact-item">
+                    <i class="fas fa-phone"></i> +91-7602172452
+                </a>
+                <span class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> Bishnupur, Bankura, West Bengal, India
+                </span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/mrakash2004" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/akash-dey-ab74a5218/" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:akashdey.work@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review-section" id="reviews">
+        <div class="review-container">
+            <div class="section-title">Share Your Thoughts</div>
+            <h2 class="section-heading">Leave a Review</h2>
+
+            <div class="review-form-wrapper">
+                <!-- Star Rating -->
+                <div class="star-rating" id="starRating">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+                <p class="star-label" id="starLabel">Click to rate</p>
+
+                <input type="text" id="reviewerName" class="review-input" placeholder="Your Name" maxlength="60" />
+                <textarea id="reviewMessage" class="review-input review-textarea" placeholder="Write your review here…"
+                    maxlength="500"></textarea>
+
+                <button class="btn btn-primary review-btn" id="submitReview">Send Review</button>
+                <p class="review-status" id="reviewStatus"></p>
+            </div>
+
+            <!-- Reviews display (session-based, visible below form) -->
+            <div class="submitted-reviews" id="submittedReviews"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Akash Dey's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- Typed.js for typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'CSE Student', 'DSA Problem Solver', 'OOPS in JAVA', 'Node JS', 'Database Management'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true,
+        });
+    </script>
+    <!-- Resource filter tabs -->
+    <script>
+        document.querySelectorAll('.res-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.res-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                document.querySelectorAll('.resource-card').forEach(card => {
+                    const cats = card.dataset.category.split(' ');
+                    card.style.display = (filter === 'all' || cats.includes(filter)) ? 'flex' : 'none';
+                });
+            });
+        });
+    </script>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-ring" id="scrollRing">
+        <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7f29cf" />
+                    <stop offset="100%" stop-color="#2d7cc1" />
+                </linearGradient>
+            </defs>
+            <circle class="ring-bg" cx="22" cy="22" r="18" />
+            <circle class="ring-fill" id="ringFill" cx="22" cy="22" r="18" />
+        </svg>
+        <span class="scroll-pct" id="scrollPct">0%</span>
+    </div>
+
+    <script>
+        (function () {
+            const ring = document.getElementById('scrollRing');
+            const fill = document.getElementById('ringFill');
+            const label = document.getElementById('scrollPct');
+            const radius = 18;
+            const circum = 2 * Math.PI * radius;          // ≈ 113.1
+            fill.style.strokeDasharray = circum;
+            fill.style.strokeDashoffset = circum;           // start empty
+
+            function onScroll() {
+                const scrolled = window.scrollY || document.documentElement.scrollTop;
+                const total = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = total > 0 ? Math.round((scrolled / total) * 100) : 0;
+
+                fill.style.strokeDashoffset = circum - (circum * pct) / 100;
+                label.textContent = pct + '%';
+
+                // hide at very top, show once user scrolls a bit
+                ring.style.opacity = scrolled > 80 ? '1' : '0';
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            // click to scroll back to top
+            ring.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        })();
+    </script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // ── EmailJS config ──────────────────────────────────────────────────────
+        // 1. Sign up free at https://www.emailjs.com
+        // 2. Add a Gmail service  →  copy Service ID  →  paste below
+        // 3. Create an email template with these variables:
+        //      {{reviewer_name}}  {{star_rating}}  {{review_message}}  {{submitted_at}}
+        //    Copy Template ID → paste below
+        // 4. Account → API Keys → copy Public Key → paste below
+        const EMAILJS_PUBLIC_KEY = 'gH9tBZxbEORoqO89m';   // ← replace
+        const EMAILJS_SERVICE_ID = 'service_hrluy77';   // ← replace
+        const EMAILJS_TEMPLATE_ID = 'template_pwxyd6d';  // ← replace
+        // ───────────────────────────────────────────────────────────────────────
+
+        emailjs.init({ publicKey: gH9tBZxbEORoqO89m });
+
+        // ── Star rating ─────────────────────────────────────────────────────────
+        let selectedRating = 0;
+        const stars = document.querySelectorAll('.star');
+        const starLabel = document.getElementById('starLabel');
+        const ratingLabels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => paintStars(+star.dataset.value));
+            star.addEventListener('mouseout', () => paintStars(selectedRating));
+            star.addEventListener('click', () => {
+                selectedRating = +star.dataset.value;
+                paintStars(selectedRating);
+                starLabel.textContent = ratingLabels[selectedRating];
+            });
+        });
+
+        function paintStars(n) {
+            stars.forEach(s => s.classList.toggle('active', +s.dataset.value <= n));
+        }
+
+        // ── Local review store (sessionStorage → survives refresh in same tab) ──
+        let localReviews = [];
+        try { localReviews = JSON.parse(sessionStorage.getItem('akashReviews') || '[]'); } catch (e) { }
+        renderReviews();
+
+        // ── Submit ──────────────────────────────────────────────────────────────
+        document.getElementById('submitReview').addEventListener('click', async () => {
+            const name = document.getElementById('reviewerName').value.trim();
+            const message = document.getElementById('reviewMessage').value.trim();
+            const status = document.getElementById('reviewStatus');
+            const btn = document.getElementById('submitReview');
+
+            if (!selectedRating) { setStatus('⚠️ Please select a star rating.', 'error'); return; }
+            if (!name) { setStatus('⚠️ Please enter your name.', 'error'); return; }
+            if (!message) { setStatus('⚠️ Please write a review.', 'error'); return; }
+
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            const starsStr = '★'.repeat(selectedRating) + '☆'.repeat(5 - selectedRating);
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    reviewer_name: name,
+                    star_rating: `${starsStr} (${selectedRating}/5)`,
+                    review_message: message,
+                    submitted_at: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+                });
+
+                // Save locally and render
+                const review = { name, message, rating: selectedRating, date: new Date().toLocaleDateString('en-IN') };
+                localReviews.unshift(review);
+                sessionStorage.setItem('akashReviews', JSON.stringify(localReviews));
+                renderReviews();
+
+                setStatus('✅ Thank you! Your review has been sent.', 'success');
+                document.getElementById('reviewerName').value = '';
+                document.getElementById('reviewMessage').value = '';
+                selectedRating = 0;
+                paintStars(0);
+                starLabel.textContent = 'Click to rate';
+            } catch (err) {
+                setStatus('❌ Could not send. Please configure EmailJS keys in the code.', 'error');
+                console.error(err);
+            }
+
+            btn.textContent = 'Send Review';
+            btn.disabled = false;
+        });
+
+        function setStatus(msg, type) {
+            const el = document.getElementById('reviewStatus');
+            el.textContent = msg;
+            el.className = 'review-status ' + type;
+        }
+
+        function renderReviews() {
+            const container = document.getElementById('submittedReviews');
+            if (!localReviews.length) { container.innerHTML = ''; return; }
+            container.innerHTML =
+                '<h3 class="reviews-heading">Recent Reviews</h3>' +
+                localReviews.map(r => `
+                <div class="review-card">
+                    <div class="review-card-header">
+                        <span class="review-author">${esc(r.name)}</span>
+                        <span class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</span>
+                        <span class="review-date">${r.date}</span>
+                    </div>
+                    <p class="review-text">${esc(r.message)}</p>
+                </div>`).join('');
+        }
+
+        function esc(s) {
+            return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+    </script>
+</body>
+
+</html>
