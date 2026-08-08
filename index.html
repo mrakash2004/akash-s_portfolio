@@ -339,7 +339,7 @@
                     <i class="fas fa-envelope"></i> akashdey.work@gmail.com
                 </a>
                 <a href="tel:+917602172452" class="contact-item">
-                    <i class="fas fa-phone"></i> +91-7602172452
+                    <i class="fas fa-phone"></i> +91-**********
                 </a>
                 <span class="contact-item">
                     <i class="fas fa-map-marker-alt"></i> Bishnupur, Bankura, West Bengal, India
@@ -363,12 +363,17 @@
 
             <div class="review-form-wrapper">
                 <!-- Star Rating -->
-                <div class="star-rating" id="starRating">
-                    <span class="star" data-value="1">★</span>
-                    <span class="star" data-value="2">★</span>
-                    <span class="star" data-value="3">★</span>
-                    <span class="star" data-value="4">★</span>
-                    <span class="star" data-value="5">★</span>
+                <div class="star-rating" id="starRating" role="radiogroup" aria-label="Choose a rating">
+                    <button type="button" class="star" data-value="1" role="radio" aria-label="1 star"
+                        aria-checked="false">★</button>
+                    <button type="button" class="star" data-value="2" role="radio" aria-label="2 stars"
+                        aria-checked="false">★</button>
+                    <button type="button" class="star" data-value="3" role="radio" aria-label="3 stars"
+                        aria-checked="false">★</button>
+                    <button type="button" class="star" data-value="4" role="radio" aria-label="4 stars"
+                        aria-checked="false">★</button>
+                    <button type="button" class="star" data-value="5" role="radio" aria-label="5 stars"
+                        aria-checked="false">★</button>
                 </div>
                 <p class="star-label" id="starLabel">Click to rate</p>
 
@@ -381,7 +386,7 @@
             </div>
 
             <!-- Reviews display (session-based, visible below form) -->
-            <div class="submitted-reviews" id="submittedReviews"></div>
+            <div class="submitted-reviews" id="submittedReviews" aria-live="polite"></div>
         </div>
     </section>
 
@@ -473,7 +478,9 @@
         const EMAILJS_TEMPLATE_ID = 'template_pwxyd6d';  // ← replace
         // ───────────────────────────────────────────────────────────────────────
 
-        emailjs.init({ publicKey: gH9tBZxbEORoqO89m });
+        if (window.emailjs) {
+            emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+        }
 
         // ── Star rating ─────────────────────────────────────────────────────────
         let selectedRating = 0;
@@ -492,12 +499,15 @@
         });
 
         function paintStars(n) {
-            stars.forEach(s => s.classList.toggle('active', +s.dataset.value <= n));
+            stars.forEach(s => {
+                s.classList.toggle('active', +s.dataset.value <= n);
+                s.setAttribute('aria-checked', String(+s.dataset.value === n));
+            });
         }
 
-        // ── Local review store (sessionStorage → survives refresh in same tab) ──
+        // ── Local review store (persists on this device after refresh) ──────────
         let localReviews = [];
-        try { localReviews = JSON.parse(sessionStorage.getItem('akashReviews') || '[]'); } catch (e) { }
+        try { localReviews = JSON.parse(localStorage.getItem('akashReviews') || '[]'); } catch (e) { }
         renderReviews();
 
         // ── Submit ──────────────────────────────────────────────────────────────
@@ -526,7 +536,7 @@
                 // Save locally and render
                 const review = { name, message, rating: selectedRating, date: new Date().toLocaleDateString('en-IN') };
                 localReviews.unshift(review);
-                sessionStorage.setItem('akashReviews', JSON.stringify(localReviews));
+                localStorage.setItem('akashReviews', JSON.stringify(localReviews));
                 renderReviews();
 
                 setStatus('✅ Thank you! Your review has been sent.', 'success');
@@ -536,7 +546,18 @@
                 paintStars(0);
                 starLabel.textContent = 'Click to rate';
             } catch (err) {
-                setStatus('❌ Could not send. Please configure EmailJS keys in the code.', 'error');
+                // The portfolio remains functional when EmailJS or the network fails.
+                const review = { name, message, rating: selectedRating, date: new Date().toLocaleDateString('en-IN') };
+                localReviews.unshift(review);
+                localStorage.setItem('akashReviews', JSON.stringify(localReviews));
+                renderReviews();
+
+                setStatus('✅ Your review has been saved. The email notification could not be sent.', 'success');
+                document.getElementById('reviewerName').value = '';
+                document.getElementById('reviewMessage').value = '';
+                selectedRating = 0;
+                paintStars(0);
+                starLabel.textContent = 'Click to rate';
                 console.error(err);
             }
 
